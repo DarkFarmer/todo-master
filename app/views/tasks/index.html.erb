@@ -46,6 +46,7 @@
 					    <%= f.input :done ,   :input_html => { :class => 'box'  } , :label => false  %>
 					    <%= f.button :submit ,  :class => 'hidden'   %>
 					    <%= raw auto_link( h(task.name), :html => { :target => '_blank' }) %>
+					    <%= task.tasks %>
 					    <p class="delete-task">
 					        <%= link_to 'X', list_task_url(list, task), :confirm => 'Are you sure?', :method => :delete %>
 					    </p>
